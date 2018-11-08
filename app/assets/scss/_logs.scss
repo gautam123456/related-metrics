@@ -1,0 +1,104 @@
+.logs{
+    display: flex;
+    border: 1px dashed #ddd;
+    border-top: none;
+    position: relative;
+
+    .filter{
+        border-right: 1px dashed #ddd;
+        height: 100vh;
+        padding: 5px;
+        color: #444;
+        font-size: 15px;
+        transition: all .5s;
+
+        &.true{
+            flex: 2;
+        }
+
+        &.false{
+            flex: 0;
+        }
+    }
+
+    .logs-container{
+        flex: 10;
+
+        .tags{
+            padding: 5px;
+            //border: 1px dashed #eee;
+            border-left: none;
+            background-color: #f8f8f8;
+        }
+
+        .log-header{
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+            .date-time{
+                color: #2f7ed8;
+                border: 1px solid #ddd;
+                padding: 5px 10px;
+                font-weight: 400;
+                font-size: 14px;
+                font-family: sans-serif;
+                border-radius: 2px; 
+            }
+
+            .search{
+                padding: 4px;
+                min-width: 200px;
+            }
+        }
+
+        .logs-table{
+            display: flex;
+            flex-direction: column;
+            color: #666;
+            font-size: 12px;
+            font-family: Consolas,Monaco,Courier,monospace;
+
+            .machine{
+                margin-top: 5px;
+
+                .name{
+                    padding: 1px 8px;
+                    border-radius: 3px 3px 0 0;
+                    color: #fff;
+                }
+
+                .machine0{
+                    border: 1px solid #b5e1f7;
+                    
+                    &.name{
+                        background-color: #b5e1f7;
+                        
+                    }
+                }
+
+                .machine1{
+                    border: 1px solid #CCCCFF;
+                    
+                    &.name{
+                        background-color: #CCCCFF;
+                        
+                    }
+                }
+
+                .machine2{
+                    border: 1px solid #B5DBD8;
+                    
+                    &.name{
+                        background-color:#B5DBD8;
+                        
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+coverage/
+dist/
+html-report/
+node_modules/
+**/*npm-debug.log.*
+src/itfm-clarity.iml
+karma_html
+node_modules*
+coverage*
+.idea
+.DS_Store
+*.js
+test-output/
+*.log

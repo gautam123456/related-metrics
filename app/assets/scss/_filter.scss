@@ -1,0 +1,67 @@
+.filter{
+    z-index: 999999;
+    position: fixed;
+    top: -200px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 20px 0 rgba(0,0,0,.12);
+    font-size: 13px;
+    transition: top .3s ease-in 0s;
+
+    &.visible{
+        top: 0;
+    }
+
+    .filter-body{
+        padding: 20px;
+    }
+
+    .fade{
+        color: #999;
+        margin-right: 10px;
+    }
+
+    .filter-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .fa{
+            padding: 5px;
+
+            &.fil{
+                margin: 5px 0 0 8px;
+                font-size: 17px;
+            }
+
+            &:hover{
+                background-color: #eee;
+            }
+        }
+    }
+
+    .query{
+        font-size: 12px;
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px dashed #f8f8f8;
+        font-family: Consolas,Monaco,Courier,monospace;
+    }
+
+    .action{
+        padding: 5px;
+        display: flex;
+        justify-content: flex-end;
+
+        button{
+            margin-left: 10px; 
+        }
+    }
+}

@@ -1,0 +1,169 @@
+@import './variables/screen';
+
+.main-container{
+    transition: height 2s linear;
+
+    .heading{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 900;
+    }
+}
+.main-chart-container{
+    flex: 7;
+    width: 100%;
+    position: relative;
+
+    .main-chart{
+        height: 100%;
+
+        .time-range{
+            font-size: 10px;
+            color: #999;
+        }
+
+        &.active{
+            box-shadow: 0 0 10px 0 $brand-color-1;
+        }
+
+        [data-highcharts-chart]{
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 84%;
+        }
+    }
+}
+
+.topology-conatiner{
+    flex: 3;
+}
+
+.thumbnail-container{
+    display: flex;
+    height: 190px;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: scroll;
+
+    .thumbnail{
+        flex: auto;
+    }
+
+    >div{
+        position: relative;
+        flex: 1;
+        
+
+        [data-highcharts-chart]{
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 130px;
+        }
+
+        .highcharts-scrollbar{
+            display: none;
+        }
+    }
+}
+
+.logs-container{
+    flex: 1;
+    padding: 5px;
+}
+
+.well{
+    height: 500px;
+    display: flex;
+    width: 0;
+    flex-direction: column;
+}
+
+.icard{
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.12);
+    margin-bottom: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.12);
+    margin: 5px;
+}
+
+body{
+    font-family: 'Lato';
+    margin: 0;
+    padding: 0;
+}
+
+.fa{
+    margin-right: 5px;
+}
+
+.clickable{
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+input, button{
+    &:focus{
+        outline:none;
+    }
+}
+
+input{
+    background-color: transparent;
+    font-family: 'Lato';
+    font-size: 14px;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-family: 'Lato'
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        font-family: 'Lato'
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+         font-family: 'Lato'
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+         font-family: 'Lato'
+    }
+}
+
+button{
+    border: 1px solid #b5e1f7;
+    cursor: pointer;
+    padding: 7px 15px;
+    border-radius: 2px;
+    font-weight: 900;
+
+    &:hover{
+        background-color: #b5e1f7;
+        color: #fff;
+    }
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+	stroke-width: 1px;
+	stroke: #eee;
+}
+
+.highcharts-xaxis .highcharts-tick {
+	stroke-width: 1px;
+	stroke: #d8d8d8;
+}
+.highcharts-minor-grid-line {
+    stroke-dasharray: 2, 2;
+}
+
+.highcharts-grid-line {
+    stroke-dasharray: 1, 1;
+    stroke: #d8d8d8;
+}
+
+
+

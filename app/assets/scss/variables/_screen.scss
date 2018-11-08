@@ -1,0 +1,45 @@
+//supprot destop
+$support-destop: true !default;
+$support-hover: $support-destop !default;
+$support-focus: $support-destop !default;
+
+// very small screen / phone
+$screen-xs: 320px !default;
+//$screen-xs-min: 320px;
+//$screen-phone: $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm: 640px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+//$screen-lg: 1200px !default;
+//$screen-lg-min: $screen-lg !default;
+//$screen-lg-desktop: $screen-lg-min !default;
+
+$screen-xs-max: $screen-sm-min - 1 !default;
+//$screen-sm-max: $screen-md-min - 1 !default;
+//$screen-md-max: $screen-lg-min - 1 !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+//$support-destop: true !default;
+
+
+//Colors to be used
+$brand-color-1: #7cb5ec !default;
+
+
+$menu-bg: #fff !default;
+$menu-bg-2: #f8f8f8 !default;
+
+
+//Header Hight
+$header-height: 65px !default;

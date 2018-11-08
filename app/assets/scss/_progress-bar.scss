@@ -1,0 +1,13 @@
+.progress-bar{
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+
+    .filler{
+        background-color: #b5e1f7;
+        height: 100%;
+        transition: width 1s ease-in;
+    }
+}

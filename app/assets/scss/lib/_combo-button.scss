@@ -1,0 +1,24 @@
+@import "../variables/screen";
+
+.combo-button{
+  display: inline-flex;
+  font-size: 12px;
+  border: 1px solid $brand-color-1;
+  border-radius: 2px;
+  margin: 0 10px;
+  color: $brand-color-1;
+
+  .button{
+    padding: 2px 5px;
+     
+    &:hover{
+       background-color: $brand-color-1;
+       color: #fff;
+     }
+
+     &.active{
+       background-color: $brand-color-1;
+       color: #fff;
+     }
+  }
+}

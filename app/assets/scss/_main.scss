@@ -1,0 +1,31 @@
+$color: #262828;
+
+body {
+  color: $color;
+}
+
+select {
+  width: auto;
+  padding: 6px;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  font-size: 14px;
+  margin: 5px 5px 0 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    } 
+}

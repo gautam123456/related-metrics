@@ -1,0 +1,51 @@
+.logs-row{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 10px;
+    transition: all .5s;
+
+    &:nth-child(odd){
+        background-color: #F8F8F8;
+    }
+    .bold{
+        color: #000;
+        font-weight: 600
+
+    }
+    .col1{
+        flex: 2;
+    }
+    .col2{
+        flex: 14;
+    }
+
+    .col3{
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        .type{
+            border-radius: 10px;
+            display: flex;
+            padding: 0 8px;
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .error{
+            background-color: #EF7215
+        }
+
+        .debug{
+            background-color: #00A572;
+        }
+
+        .alert{
+            background-color: #FB606D;
+        }
+    }
+}

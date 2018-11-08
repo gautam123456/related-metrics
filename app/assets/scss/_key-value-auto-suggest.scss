@@ -1,0 +1,15 @@
+.key-value-auto-suggest{
+    display: inline-flex;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+    align-items: center;
+    margin-right: 5px;
+    border-bottom: 1px solid #eee;
+
+    .fa{
+        margin-left: 12px;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: 100;
+    }
+}
