@@ -1,18 +1,22 @@
 import React from 'react';
 
-const Header = ({isThumbnail}) => {
+const Header = ({isThumbnail, options}) => {
+    options = options || { header: 'Metrics for ####', description: 'Some description related to given metrics a bit longer like this...', max: 234, min: 34 };
+
+    const { header, description, max, min } = options;
+
 return (
     <div className={'head' + (isThumbnail ? ' thumbnail' : '')}>
     <div>
-        Metrics for ####
-    <div className='description'>Some description related to given metrics a bit longer like this...</div>
+        {header}
+    <div className='description'>{description}</div>
     </div>
     <div>
         <div className='bold'>
-            Max: $234
+            Max: ${max}
         </div>
         <div className='light'>
-            Min: $34
+            Min: ${min}
         </div>
     </div>
     </div>

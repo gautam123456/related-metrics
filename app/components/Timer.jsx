@@ -18,6 +18,10 @@ export default class Timer extends Component {
         }, 1000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
     handleCancel = () => {
         clearInterval(this.interval);
         this.props.callbackAfterTrigger({ makeCall: false });

@@ -46,7 +46,7 @@ class ThumbnailChart extends Component {
 
     render() {
         const { chhartOptions } = this.state,
-            { options: { color, id }, activeNode } = this.props,
+            { options: { color, id, label }, activeNode } = this.props,
             cardStyle = activeNode === id ? { boxShadow: `0 0 10px 0 ${color}` } : {};
 
         if (!chhartOptions){
@@ -56,7 +56,12 @@ class ThumbnailChart extends Component {
         return (
             <div className={'icard thumbnail clickable'} style={cardStyle} onClick={this.handleChartClick}>
                 <div style={{height: 2, backgroundColor: color}}></div>
-                <Header isThumbnail='true'/>
+                <Header isThumbnail='true' options={{
+                    header: `Metrics for ${label}`,
+                    description: `Some description related to given metrics(${label}) a bit longer like this...`,
+                    max: 234,
+                    min: 34}}
+                    />
                 <HighchartsReact
                     ref="chart"
                     highcharts={Highcharts}

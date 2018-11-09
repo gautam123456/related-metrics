@@ -1,0 +1,24 @@
+.alert-popup{
+  display: inline;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  background-color: #fcd9d6 !important;
+
+  .bar{
+    height: 2px;
+    background-color: #f44336;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  .alert {
+    padding: 15px;
+    z-index: 33;
+
+    button{
+      margin-left: 50px;
+    }
+  }
+}
+
+

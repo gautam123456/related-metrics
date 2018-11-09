@@ -9,6 +9,7 @@ import Filter from './Filter';
 import ThumbnailChart from './ThumbnailChart';
 import Overlay from './Overlay';
 import { toggleFilter } from '../actions';
+import Alert from './lib/Alert';
 
 class Home extends Component {
   constructor(props){
@@ -47,7 +48,7 @@ class Home extends Component {
       { nodes: nextNodes } = nextProps;
     if(nodes && nextNodes){
       nodes = nodes.nodes;
-      nextNodes - nextNodes.nodes;
+      nextNodes = nextNodes.nodes;
       
       if (nodes.length !== nextNodes.length) {
         this.setState({ showRelatedMetrics: false });
@@ -56,12 +57,15 @@ class Home extends Component {
         }, 300);
       }
     }
-    
+  }
+
+  callbackAfterTrigger = () => {
+
   }
 
   render() {
     const { showTimer, showRelatedMetrics } = this.state,
-      { nodes } = this.props;
+      { nodes, showNotification } = this.props;
 
     return (
       <div className='main-container'>
@@ -89,6 +93,7 @@ class Home extends Component {
         <div className='logs-container'>
           <Logs />
         </div>
+        {showNotification ? <Alert callbackAfterTrigger={this.callbackAfterTrigger}/> : null}
       </div>
     )
   }
@@ -97,7 +102,8 @@ class Home extends Component {
 function mapStateToProps(state) {
   return {
     showFilter: state.misc.showFilter,
-    nodes: state.misc.nodes
+    nodes: state.misc.nodes,
+    showNotification: state.misc.notificationOptions.show
   };
 }
 

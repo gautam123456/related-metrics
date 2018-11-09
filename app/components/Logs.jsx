@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Filters from './Filter';
 import LogsRow from './LogsRow';
 import { logs } from '../data/logs';
 
 export default class Logs extends Component {
   state = {
-    acendingOrder: true
+    acendingOrder: true,
+    logs: []
   }
 
   componentDidMount() {
@@ -25,7 +25,7 @@ export default class Logs extends Component {
           {/* <div className='tags'>Tags</div> */}
           <div className='log-header'>
             <span className='date-time clickable' onClick={this.handleSortingOrderChange}><span><i className={'fa fa-arrow-' + (acendingOrder ? 'down' : 'up')} style={{ marginRight: 12 }}></i></span>DateTime</span>
-            <span><input className='search' type='text' /></span>
+            {/* <span><input className='search' type='text' /></span> */}
           </div>
           <div className='logs-table'>
             {
@@ -38,8 +38,7 @@ export default class Logs extends Component {
                     <span className={'name machine' + index}>{machine}</span>
                     <div className={'machine' + index}>
                       {logs.map((ele, index) => {
-                        const { timestamp } = ele;
-                        return <LogsRow key={timestamp + index} content={ele} />
+                        return <LogsRow key={ele.timestamp + index} content={ele} />
                       })}
                     </div>
                   </div>
